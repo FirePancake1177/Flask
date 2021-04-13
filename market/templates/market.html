@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-Market Page
+Рынок
 {% endblock %}
 {% block content %}
 
 <div class="row" style="margin-top:20px; margin-left:20px">
    <div class="col-8">
-       <h2>Available items on the Market</h2>
-       <p>Click on one of the items to start buying</p>
+       <h2>Доступные вещи на рынке</h2>
+       <p>Нажмите на вещь, чтобы купить ее</p>
        <br>
       <table class="table table-hover table-dark">
          <thead>
@@ -39,7 +39,7 @@ Market Page
       </table>
    </div>
    <div class="col-4">
-        <h2>Owned Items</h2>
+        <h2>Мои Вещи</h2>
         <p>Click on sell item to put an item back on the Market</p>
         <br>
         <div class="row">
@@ -51,10 +51,10 @@ Market Page
                           <h5 class="card-title">{{ owned_item.name }}</h5>
                           <button type="button" class="btn btn-outline-danger" style="margin-bottom: 5px"
                                   data-toggle="modal" data-target="#Modal-SellingConfirm-{{ owned_item.id }}">
-                              Sell this Item
+                              Продать эту вещь
                           </button>
                           <p class="card-text"><strong>
-                              This item costs {{ owned_item.price }}$
+                              Это стоит {{ owned_item.price }}$
                           </strong></p>
                       </div>
                   </div>
