@@ -1,23 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}
-Рынок
+Market Page
 {% endblock %}
 {% block content %}
 
 <div class="row" style="margin-top:20px; margin-left:20px">
    <div class="col-8">
-       <h2>Доступные вещи на рынке</h2>
-       <p>Нажмите на вещь, чтобы купить ее</p>
+       <h2>Доступные Вещи</h2>
+       <p>Нажмите на Вещь, чтобы купить ее!</p>
        <br>
       <table class="table table-hover table-dark">
          <thead>
             <tr>
                <!-- Your Columns HERE -->
                <th scope="col">ID</th>
-               <th scope="col">Name</th>
-               <th scope="col">Barcode</th>
-               <th scope="col">Price</th>
-               <th scope="col">Options</th>
+               <th scope="col">Название</th>
+               <th scope="col">Код</th>
+               <th scope="col">Цена</th>
+               <th scope="col">Настройки</th>
             </tr>
          </thead>
          <tbody>
@@ -30,8 +30,8 @@
                <td>{{ item.barcode }}</td>
                <td>{{ item.price }}$</td>
                <td>
-                  <button class="btn btn-outline btn-info" data-toggle="modal" data-target="#Modal-MoreInfo-{{ item.id }}">More Info</button>
-                  <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{ item.id }}">Purchase this Item</button>
+                  <button class="btn btn-outline btn-info" data-toggle="modal" data-target="#Modal-MoreInfo-{{ item.id }}">Подробнее</button>
+                  <button class="btn btn-outline btn-success" data-toggle="modal" data-target="#Modal-PurchaseConfirm-{{ item.id }}">Купить!</button>
                </td>
             </tr>
             {% endfor %}
@@ -39,7 +39,7 @@
       </table>
    </div>
    <div class="col-4">
-        <h2>Мои Вещи</h2>
+        <h2>Owned Items</h2>
         <p>Click on sell item to put an item back on the Market</p>
         <br>
         <div class="row">
@@ -54,7 +54,7 @@
                               Продать эту вещь
                           </button>
                           <p class="card-text"><strong>
-                              Это стоит {{ owned_item.price }}$
+                              Эта вещь стоит {{ owned_item.price }}$
                           </strong></p>
                       </div>
                   </div>

@@ -8,9 +8,9 @@
     <div class="container">
         <form method="POST" class="form-register" style="color:white">
             {{ form.hidden_tag() }}
-            <img class="mb-4" src="" alt="*Картинка*">
+            <img class="mb-4" src="" alt="картинка">
             <h1 class="h3 mb-3 font-weight-normal">
-                Создайте аккаунт
+                Создайте Аккаунт
             </h1>
             <br>
             {{ form.username.label() }}
@@ -28,7 +28,7 @@
             <br>
 
             <div class="checkbox mb-3">
-               <h6>Уже есть аккаунт?</h6>
+               <h6>Already have an account?</h6>
                <a class="btn btn-sm btn-secondary" href="{{ url_for('login_page') }}">Войти</a>
             </div>
 
